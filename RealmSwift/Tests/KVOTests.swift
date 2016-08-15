@@ -281,7 +281,7 @@ class KVOTests: TestCase {
     func testReadSharedSchemaFromObservedObject() {
         let obj = KVOObject()
         obj.addObserver(self, forKeyPath: "boolCol", options: [.old, .new], context: nil)
-        XCTAssertEqual(obj.dynamicType.sharedSchema(), KVOObject.sharedSchema())
+        XCTAssertEqual(type(of: obj).sharedSchema(), KVOObject.sharedSchema())
         obj.removeObserver(self, forKeyPath: "boolCol")
     }
 }
@@ -546,7 +546,7 @@ class KVOTests: TestCase {
     func testReadSharedSchemaFromObservedObject() {
         let obj = KVOObject()
         obj.addObserver(self, forKeyPath: "boolCol", options: [.Old, .New], context: nil)
-        XCTAssertEqual(obj.dynamicType.sharedSchema(), KVOObject.sharedSchema())
+        XCTAssertEqual(type(of: obj).sharedSchema(), KVOObject.sharedSchema())
         obj.removeObserver(self, forKeyPath: "boolCol")
     }
 }
