@@ -628,7 +628,7 @@ public enum Notification: String {
 }
 
 /// Closure to run when the data in a Realm was modified.
-public typealias NotificationBlock = (_ notification: Notification, _ realm: Realm) -> Void
+public typealias NotificationBlock = @escaping (_ notification: Notification, _ realm: Realm) -> Void
 
 
 // MARK: Unavailable
