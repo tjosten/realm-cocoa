@@ -258,7 +258,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return    A dictionary mapping property names to their default values.
  */
-+ (nullable NSDictionary *)defaultPropertyValues;
++ (nullable NSDictionary<NSString *, id> *)defaultPropertyValues;
 
 /**
  Override this method to specify the name of a property to be used as the primary key.
